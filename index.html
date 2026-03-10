@@ -13,11 +13,10 @@
             theme: {
                 extend: {
                     colors: {
-                        // Твоя палітра
                         brand: {
-                            light: '#ddd6fe', // Violet 300 (шапка, футер)
-                            dark: '#6d28d9',  // Violet 700 (назва)
-                            bg: '#f0f9ff',    // Sky 50 (фон сайту)
+                            light: '#ddd6fe', 
+                            dark: '#6d28d9',  
+                            bg: '#ecfeff',    // Cyan 50 (замість Sky)
                         }
                     }
                 }
@@ -29,7 +28,6 @@
 
     <nav class="bg-brand-light dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            
             <div class="text-xl md:text-2xl font-black text-brand-dark dark:text-violet-400 flex items-center gap-2 shrink-0">
                 <i class="fa-solid fa-paw"></i>
                 <span>HappyTails</span>
@@ -39,11 +37,9 @@
                 <a href="favorites.html" class="text-brand-dark dark:text-violet-400 hover:scale-110 transition text-xl">
                     <i class="fa-solid fa-heart"></i>
                 </a>
-
                 <button class="text-gray-700 dark:text-gray-300 hover:text-brand-dark dark:hover:text-white transition text-xl">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-
                 <button id="theme-toggle" class="p-2 rounded-full bg-white/50 dark:bg-gray-700 text-gray-700 dark:text-yellow-400 hover:bg-white transition shadow-sm">
                     <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden"></i>
                     <i id="theme-toggle-dark-icon" class="fa-solid fa-moon"></i>
@@ -51,163 +47,56 @@
             </div>
         </div>
     </nav>
-"relative text-center text-white px-6">
-<header class="relative aspect-square w-full md:aspect-[16/10] lg:h-[500px] flex items-center justify-center overflow-hidden border-b border-violet-100 dark:border-gray-800 shadow-inner">
-    <img src="Dog.webp" 
-         class="absolute inset-0 w-full h-full object-cover object-center" alt="Happy Dogs">
-    
-    <div class="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
-    
-    <div class="relative text-center text-white px-6">
-        <h1 class="text-2xl md:text-3xl lg:text-4xl font-black mb-1 drop-shadow-md tracking-tight">
-            Знайди свого друга
-        </h1>
+
+<header class="relative w-full bg-cyan-50 dark:bg-gray-900 overflow-hidden flex flex-col items-center justify-center border-b border-cyan-100 dark:border-gray-800">
+    <div class="relative w-full aspect-square md:h-[500px] flex items-center justify-center bg-cyan-50">
+        <img src="Dog.webp" 
+             class="w-full h-full object-contain" 
+             alt="Happy Dogs">
         
-        <p class="text-xs md:text-sm lg:text-base mb-6 opacity-95 font-medium tracking-wide">
-            Енциклопедія щасливих хвостиків
-        </p>
-        
-        <a href="gallery.html" class="bg-brand-dark/95 hover:bg-brand-dark backdrop-blur-sm text-white text-[11px] font-bold py-3 px-10 rounded-full transition-all shadow-xl inline-block uppercase tracking-wider">
-            Галерея
-        </a>
+        <div class="absolute inset-0 flex flex-col items-center justify-start pt-16 md:pt-24 text-center px-6 text-white">
+            <h1 class="text-2xl md:text-4xl font-black mb-1 drop-shadow-[0_4px_10px_rgba(0,0,0,0.7)] uppercase tracking-tight">
+                Знайди свого друга
+            </h1>
+            <p class="text-xs md:text-sm mb-6 font-bold drop-shadow-[0_2px_5px_rgba(0,0,0,0.7)] opacity-95">
+                Енциклопедія щасливих хвостиків
+            </p>
+            <a href="gallery.html" class="bg-brand-dark hover:bg-violet-800 text-white text-[10px] md:text-xs font-bold py-3 px-10 rounded-full transition-all shadow-lg uppercase tracking-widest active:scale-95 border border-white/20">
+                Галерея
+            </a>
+        </div>
     </div>
 </header>
-    
 
     <main class="container mx-auto py-10 px-4">
-        
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="group relative bg-indigo-100 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-400 dark:border-gray-700 active:scale-95">
-    
-    <a href="GermanShepherd.html" class="block">
-        <div class="relative h-64 overflow-hidden">
-            <img src="Card1.webp" 
-                 alt="Німецька вівчарка" 
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        </div>
+            <div class="group relative bg-white/60 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-200 dark:border-gray-700 active:scale-95">
+                <a href="GermanShepherd.html" class="block">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Card1.webp" alt="Німецька вівчарка" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Німецька вівчарка</h3>
+                    </div>
+                </a>
+                <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition-all z-10"><i class="fa-solid fa-heart text-lg"></i></button>
+            </div>
+            
+            <div class="group relative bg-white/60 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-200 dark:border-gray-700 active:scale-95">
+                <a href="IrishWolfhound.html" class="block">
+                    <div class="relative h-64 overflow-hidden"><img src="Card2.webp" alt="Ірландський вовкодав" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400">Ірландський вовкодав</div>
+                </a>
+                <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 z-10"><i class="fa-solid fa-heart"></i></button>
+            </div>
 
-        <div class="p-4 text-center">
-            <h3 class="text-lg font-bold text-violet-700 dark:text-violet-400 
-                       group-active:text-cyan-500 dark:group-active:text-cyan-400 
-                       transition-colors duration-150">
-                Німецька вівчарка 
-            </h3>
-        </div>
-    </a>
-    
-    <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 active:scale-125 transition-all z-10">
-        <i class="fa-solid fa-heart text-lg"></i>
-    </button>
-</div>
-<div class="group relative bg-indigo-100 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-400 dark:border-gray-700 active:scale-95">
-    
-    <a href="IrishWolfhound.html" class="block">
-        <div class="relative h-64 overflow-hidden">
-            <img src="Card2.webp" 
-                 alt="Ірландський вовкодав" 
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        </div>
-
-        <div class="p-4 text-center">
-            <h3 class="text-lg font-bold text-violet-700 dark:text-violet-400 
-                       group-active:text-cyan-500 dark:group-active:text-cyan-400 
-                       transition-colors duration-150">
-                Ірландський вовкодав 
-            </h3>
-        </div>
-    </a>
-    
-    <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 active:scale-125 transition-all z-10">
-        <i class="fa-solid fa-heart text-lg"></i>
-    </button>
-</div> 
-<div class="group relative bg-indigo-100 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-400 dark:border-gray-700 active:scale-95">
-    
-    <a href="breed-page.html" class="block">
-        <div class="relative h-64 overflow-hidden">
-            <img src="Card3.webp" 
-                 alt="Йоркширський тер'єр" 
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        </div>
-
-        <div class="p-4 text-center">
-            <h3 class="text-lg font-bold text-violet-700 dark:text-violet-400 
-                       group-active:text-cyan-500 dark:group-active:text-cyan-400 
-                       transition-colors duration-150">
-                Йоркширський тер'єр
-            </h3>
-        </div>
-    </a>
-    
-    <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 active:scale-125 transition-all z-10">
-        <i class="fa-solid fa-heart text-lg"></i>
-    </button>
-</div>
-            <div class="group relative bg-indigo-100 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-400 dark:border-gray-700 active:scale-95">
-    
-    <a href="breed-page.html" class="block">
-        <div class="relative h-64 overflow-hidden">
-            <img src="Card4.webp" 
-                 alt="Бордер-колі" 
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        </div>
-        <div class="p-4 text-center">
-            <h3 class="text-lg font-bold text-violet-700 dark:text-violet-400 
-                       group-active:text-cyan-500 dark:group-active:text-cyan-400 
-                       transition-colors duration-150">
-                Бордер-колі
-            </h3>
-        </div>
-    </a>
-    
-    <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 active:scale-125 transition-all z-10">
-        <i class="fa-solid fa-heart text-lg"></i>
-    </button>
-</div>
-        <div class="group relative bg-indigo-100 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-400 dark:border-gray-700 active:scale-95">
-    
-    <a href="breed-page.html" class="block">
-        <div class="relative h-64 overflow-hidden">
-            <img src="Card5.webp" 
-                 alt="Доберман" 
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        </div>
-
-        <div class="p-4 text-center">
-            <h3 class="text-lg font-bold text-violet-700 dark:text-violet-400 
-                       group-active:text-cyan-500 dark:group-active:text-cyan-400 
-                       transition-colors duration-150">
-                Доберман
-            </h3>
-        </div>
-    </a>
-    
-    <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 active:scale-125 transition-all z-10">
-        <i class="fa-solid fa-heart text-lg"></i>
-    </button>
-</div>
-    <div class="group relative bg-indigo-100 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-400 dark:border-gray-700 active:scale-95">
-    
-    <a href="breed-page.html" class="block">
-        <div class="relative h-64 overflow-hidden">
-            <img src="Card6.webp" 
-                 alt="Мальтійська болонка" 
-                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        </div>
-
-        <div class="p-4 text-center">
-            <h3 class="text-lg font-bold text-violet-700 dark:text-violet-400 
-                       group-active:text-cyan-500 dark:group-active:text-cyan-400 
-                       transition-colors duration-150">
-                Мальтійська болонка 
-            </h3>
-        </div>
-    </a>
-    
-    <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 dark:bg-gray-900/40 backdrop-blur-md rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 active:scale-125 transition-all z-10">
-        <i class="fa-solid fa-heart text-lg"></i>
-    </button>
-</div>
+            <div class="group relative bg-white/60 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-200 dark:border-gray-700 active:scale-95">
+                <a href="breed-page.html" class="block">
+                    <div class="relative h-64 overflow-hidden"><img src="Card3.webp" alt="Йоркширський тер'єр" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400">Йоркширський тер'єр</div>
+                </a>
+                <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 z-10"><i class="fa-solid fa-heart"></i></button>
+            </div>
         </div>
     </main>
 
@@ -217,9 +106,7 @@
                 <i class="fa-solid fa-paw"></i> HappyTails
             </div>
             <p class="text-brand-dark/70 dark:text-gray-400 text-sm italic">Зроблено з любов'ю до пухнастиків</p>
-            <div class="mt-4 text-xs text-brand-dark/50 dark:text-gray-500 font-medium">
-                © 2026
-            </div>
+            <div class="mt-4 text-xs text-brand-dark/50 dark:text-gray-500 font-medium">© 2026</div>
         </div>
     </footer>
 
