@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Німецька вівчарка — HappyTails</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#ddd6fe',
+                            dark: '#6d28d9',
+                            bg: '#f0f9ff',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-bg dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300">
+
+    <nav class="bg-brand-light dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-xl md:text-2xl font-black text-brand-dark dark:text-violet-400 flex items-center gap-2 shrink-0">
+                <i class="fa-solid fa-paw"></i>
+                <span>HappyTails</span>
+            </a>
+            <div class="flex items-center gap-5">
+                <a href="index.html" class="text-brand-dark dark:text-violet-400 font-bold hover:underline">Головна</a>
+                <button id="theme-toggle" class="p-2 rounded-full bg-white/50 dark:bg-gray-700 text-gray-700 dark:text-yellow-400 shadow-sm transition-all">
+                    <i id="theme-toggle-dark-icon" class="fa-solid fa-moon"></i>
+                    <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto py-10 px-4 max-w-4xl">
+        <a href="index.html" class="inline-flex items-center gap-2 text-violet-700 dark:text-violet-400 font-bold mb-6 hover:gap-4 transition-all">
+            <i class="fa-solid fa-arrow-left"></i> Назад до списку
+        </a>
+
+        <h1 class="text-4xl md:text-6xl font-black text-brand-dark dark:text-violet-400 mb-8 uppercase tracking-tighter">
+            Ірландський вовкодав
+        </h1>
+
+        <div class="flex flex-col items-center mb-12">
+            <div class="w-full max-w-xl aspect-square overflow-hidden relative rounded-3xl shadow-2xl border-4 border-white dark:border-gray-800">
+                <div class="flex h-full transition-transform duration-700 ease-in-out" id="slider">
+                    <img src="Iw1.webp" class="w-full h-full object-cover flex-shrink-0" alt="Вівчарка 1">
+                    <img src="Iw2.webp" class="w-full h-full object-cover flex-shrink-0" alt="Вівчарка 2">
+                    <img src="Iw3.webp" class="w-full h-full object-cover flex-shrink-0" alt="Вівчарка 3">
+                    <img src="Iw4.webp" class="w-full h-full object-cover flex-shrink-0" alt="Вівчарка 4">
+                    <img src="Iw5.webp" class="w-full h-full object-cover flex-shrink-0" alt="Вівчарка 5">
+                </div>
+                
+                <button class="absolute top-4 right-4 w-12 h-12 bg-white/80 dark:bg-gray-900/60 backdrop-blur-md rounded-full text-gray-400 hover:text-red-500 transition-all text-xl shadow-md">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+
+            <div class="flex items-center mt-6 space-x-3" id="dot-indicators">
+                <span class="w-3 h-3 bg-violet-300 dark:bg-gray-600 rounded-full cursor-pointer transition-all"></span>
+                <span class="w-3 h-3 bg-violet-300 dark:bg-gray-600 rounded-full cursor-pointer transition-all"></span>
+                <span class="w-3 h-3 bg-violet-300 dark:bg-gray-600 rounded-full cursor-pointer transition-all"></span>
+                <span class="w-3 h-3 bg-violet-300 dark:bg-gray-600 rounded-full cursor-pointer transition-all"></span>
+                <span class="w-3 h-3 bg-violet-300 dark:bg-gray-600 rounded-full cursor-pointer transition-all"></span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="md:col-span-2 space-y-8">
+                <section>
+                    <h2 class="text-2xl font-bold border-b-2 border-violet-200 pb-2 mb-4 text-brand-dark dark:text-violet-400">Опис</h2>
+                    <p class="text-lg leading-relaxed opacity-90">
+Ірландський вовкодав - прямодушний кудлатий велетень, який охоче поділиться з вами секретом найчистішої та щирої дружби. Народжений для небезпечної та важкої роботи, сьогодні цей грізний гігант трохи відійшов від справ, не втративши при цьому спортивних навичок та мисливських інстинктів. Проте не поспішайте зачаровуватися агресивним і підкреслено серйозним виглядом ірландського вовкодава і не намагайтеся розглянути в ньому захисника вашої власності. Під маскою серйозності та напускної грізності ховається розумне, чуйне, але зовсім не підозріле створіння, яке нізащо не дозволить собі образити людину.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold border-b-2 border-violet-200 pb-2 mb-4 text-brand-dark dark:text-violet-400">Характер</h2>
+                    <p class="text-lg leading-relaxed opacity-90">
+Ірландський вовкодав — доброзичливий і добрий, це ніжний гігант собачого світу. Проте цуценята та молоді собаки енергійні та буйні, тому можуть бути не ідеальним вибором для сім'ї з маленькими дітьми. Він чудово ладнає з іншими собаками, але деяких може налякати своїм розміром. Дуже величезний розмір цього собаки робить його непридатним для багатьох сімей, але для тих, хто здатний задовольнити його потреби, він стане відданим компаньйоном.
+                    </p>
+                </section>
+                <section>
+                    <h2 class="text-2xl font-bold border-b-2 border-violet-200 pb-2 mb-4 text-brand-dark dark:text-violet-400">Походження</h2>
+                    <p class="font-bold mb-2 ">Країна походження: Ірландія</p>
+                    <p class="text-lg leading-relaxed opacity-90">
+                         Ірландський вовкодав – давня порода. Перше документальне підтвердження існування великих собак, схожих на вовків в Ірландії, з'явилося понад 2000 років тому. Ірландські вовкодави – це собаки королів та знаті. Порода має давню захоплюючу історію. Її використовували під час військових дій (собака збивала воїнів із коней та колісниць), а також для полювання на вовків. У 1786 році популярність породи пішла на спад, що посилювалося Великим голодом у 1840-ті роки. Однак порода була відроджена самовідданими ентузіастами.
+                    </p>
+                </section>
+            </div>
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold border-b-2 border-violet-200 pb-2 text-brand-dark dark:text-violet-400 flex items-center gap-2">
+                    <i class="fa-solid fa-list-check text-sm opacity-60"></i> Характеристика
+                </h2>  
+                <div class="space-y-4">
+                    <div class="group p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-800 rounded-2xl shadow-sm border border-violet-100 dark:border-gray-700 hover:border-violet-400 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <i class="fa-solid fa-expand text-violet-600 dark:text-violet-400"></i>
+                            <span class="text-xs uppercase font-black text-gray-500 dark:text-gray-400 tracking-wider">Розмір</span>
+                        </div>
+                        <span class="font-bold text-gray-800 dark:text-gray-100">Великі</span>
+                    </div>
+
+                    <div class="group p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-800 rounded-2xl shadow-sm border border-violet-100 dark:border-gray-700 hover:border-violet-400 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <i class="fa-solid fa-arrows-up-down text-violet-600 dark:text-violet-400"></i>
+                            <span class="text-xs uppercase font-black text-gray-500 dark:text-gray-400 tracking-wider">Зріст</span>
+                        </div>
+                        <span class="font-bold text-gray-800 dark:text-gray-100 text-sm">самці 77-79- см; самки 69-71 см</span>
+                    </div>
+
+                    <div class="group p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-800 rounded-2xl shadow-sm border border-violet-100 dark:border-gray-700 hover:border-violet-400 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <i class="fa-solid fa-scale-balanced text-violet-600 dark:text-violet-400"></i>
+                            <span class="text-xs uppercase font-black text-gray-500 dark:text-gray-400 tracking-wider">Вага породи</span>
+                        </div>
+                        <span class="font-bold text-gray-800 dark:text-gray-100 text-sm">самці 50-54 кг, самки 38-40 кг</span>
+                    </div>
+
+                    <div class="group p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-800 rounded-2xl shadow-sm border border-violet-100 dark:border-gray-700 hover:border-violet-400 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <i class="fa-solid fa-hourglass-half text-violet-600 dark:text-violet-400"></i>
+                            <span class="text-xs uppercase font-black text-gray-500 dark:text-gray-400 tracking-wider">Тривалість життя</span>
+                        </div>
+                        <span class="font-bold text-gray-800 dark:text-gray-100">10-12 років</span>
+                    </div>
+
+                    <div class="group p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-800 rounded-2xl shadow-sm border border-violet-100 dark:border-gray-700 hover:border-violet-400 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <i class="fa-solid fa-location-dot text-violet-600 dark:text-violet-400"></i>
+                            <span class="text-xs uppercase font-black text-gray-500 dark:text-gray-400 tracking-wider">Країна походження</span>
+                        </div>
+                        <span class="font-bold text-gray-800 dark:text-gray-100">Ірландія</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+ <footer class="bg-brand-light dark:bg-gray-800 py-8 mt-10 transition-colors duration-300 border-t border-brand-dark/10">
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-xl font-black text-brand-dark dark:text-violet-400 mb-2">
+                <i class="fa-solid fa-paw"></i> HappyTails
+            </div>
+            <p class="text-brand-dark/70 dark:text-gray-400 text-sm italic">Зроблено з любов'ю до пухнастиків</p>
+            <div class="mt-4 text-xs text-brand-dark/50 dark:text-gray-500 font-medium">
+                © 2026
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // джава скріпт
+        const slider = document.getElementById('slider');
+        const dots = document.querySelectorAll('#dot-indicators span');
+        let currentSlide = 0;
+        const totalSlides = dots.length;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach(dot => {
+                dot.classList.remove('bg-violet-700', 'w-6');
+                dot.classList.add('bg-violet-300', 'w-3');
+            });
+            dots[index].classList.remove('bg-violet-300', 'w-3');
+            dots[index].classList.add('bg-violet-700', 'w-6');
+            currentSlide = index;
+        }
+
+        function autoSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }
+        setInterval(autoSlide, 6000); // Слайд кожні 7 секунди
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => goToSlide(idx));
+        });
+
+        goToSlide(0);
+
+        // СКРИПТ ТЕМИ
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            lightIcon.classList.remove('hidden');
+            darkIcon.classList.add('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            lightIcon.classList.toggle('hidden');
+            darkIcon.classList.toggle('hidden');
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
