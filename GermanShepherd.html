@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Німецька вівчарка — HappyTails</title>
-    
+    <title>Німецька вівчарка: опис, характер та походження — HappyTails</title>
+<meta name="description" content="Все про німецьку вівчарку: від історії походження до особливостей характеру та фізичних характеристик. Дізнайтеся, чи підходить ця порода саме вам.">
+<meta name="keywords" content="німецька вівчарка, характеристика вівчарки, характер німецької вівчарки, великі породи собак, вівчарка фото">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@700;900&display=swap" rel="stylesheet">
@@ -69,9 +71,9 @@
                     <img src="Gs5.webp" class="w-full h-full object-cover flex-shrink-0" alt="Вівчарка 5">
                 </div>
                 
-                <button class="absolute top-4 right-4 w-12 h-12 bg-white/80 dark:bg-gray-900/60 backdrop-blur-md rounded-full text-gray-400 hover:text-red-500 transition-all text-xl shadow-md">
-                    <i class="fa-solid fa-heart"></i>
-                </button>
+                 <button onclick="toggleFavorite('GermanShepherd')" id="fav-btn" class="absolute top-4 right-4 w-12 h-12 bg-white/80 dark:bg-gray-900/60 backdrop-blur-md rounded-full text-gray-400 hover:text-red-500 transition-all text-xl shadow-md z-10 flex items-center justify-center">
+    <i id="heart-icon" class="fa-solid fa-heart transition-colors duration-300"></i>
+</button>
             </div>
 
             <div class="flex items-center mt-6 space-x-3" id="dot-indicators">
@@ -226,6 +228,41 @@
                 localStorage.setItem('color-theme', 'dark');
             }
         });
+function toggleFavorite(breedId) {
+    let favorites = JSON.parse(localStorage.getItem('myFavorites')) || [];
+    const icon = document.getElementById('heart-icon');
+    
+    if (favorites.includes(breedId)) {
+        // Якщо вже є — видаляємо
+        favorites = favorites.filter(id => id !== breedId);
+        icon.classList.replace('text-red-500', 'text-gray-400');
+    } else {
+        // Якщо немає — додаємо
+        favorites.push(breedId);
+        icon.classList.replace('text-gray-400', 'text-red-500');
+    }
+    
+    // Зберігаємо оновлений список у пам'ять браузера
+    localStorage.setItem('myFavorites', JSON.stringify(favorites));
+}
+
+// Перевірка при завантаженні сторінки саме для Болоньєза
+window.addEventListener('DOMContentLoaded', function() {
+    const favorites = JSON.parse(localStorage.getItem('myFavorites')) || [];
+    const breedId = 'GermanShepherd'; // Назва породи для цієї сторінки
+    const icon = document.getElementById('heart-icon');
+    
+    if (favorites.includes(breedId)) {
+        // Якщо порода в списку вподобаних — робимо серце червоним
+        icon.classList.add('text-red-500');
+        icon.classList.remove('text-gray-400');
+    } else {
+        // Якщо ні — залишаємо сірим
+        icon.classList.add('text-gray-400');
+        icon.classList.remove('text-red-500');
+    }
+});
+
     </script>
 </body>
 </html>
