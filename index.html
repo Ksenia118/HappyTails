@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HappyTails — Твій світ собак</title>
+<meta name="description" content="HappyTails — це детальна онлайн-енциклопедія про різні породи собак. Дізнайтеся все про характер, походження та особливості догляду за вашими улюбленими пухнастиками.">
+<meta name="keywords" content="породи собак, енциклопедія собак, німецька вівчарка, догляд за собаками, домашні тварини, вибір собаки">
+
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +47,7 @@
             </div>
 
             <div class="flex items-center gap-3 md:gap-5">
-                <a href="favorites.html" class="text-brand-dark dark:text-violet-400 hover:scale-110 transition text-xl">
+                <a href="favorite.html" class="text-brand-dark dark:text-violet-400 hover:scale-110 transition text-xl">
                     <i class="fa-solid fa-heart"></i>
                 </a>
 
@@ -93,47 +96,59 @@
                         <h3 class="text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Німецька вівчарка</h3>
                     </div>
                 </a>
-                <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 backdrop-blur-md rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 active:scale-125 transition-all z-10"><i class="fa-solid fa-heart text-lg"></i></button>
+              <button onclick="toggleFavorite('GermanShepherd', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+    <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
+</button>
             </div>
 
             <div class="group relative bg-white/60 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-200 dark:border-gray-700 active:scale-95">
                 <a href="IrishWolfhound.html" class="block">
                     <div class="relative h-64 overflow-hidden"><img src="Card2.webp" alt="Ірландський вовкодав" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 font-display">Ірландський вовкодав</div>
+                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Ірландський вовкодав</div>
                 </a>
-                <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 z-10"><i class="fa-solid fa-heart"></i></button>
+                <button onclick="toggleFavorite('IrishWolfhound', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+    <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
+</button>
             </div>
 
             <div class="group relative bg-white/60 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-200 dark:border-gray-700 active:scale-95">
-                <a href="breed-page.html" class="block">
+                <a href="YorkshireTerrier.html" class="block">
                     <div class="relative h-64 overflow-hidden"><img src="Card3.webp" alt="Йоркширський тер'єр" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 font-display">Йоркширський тер'єр</div>
+                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Йоркширський тер'єр</div>
                 </a>
-                <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 z-10"><i class="fa-solid fa-heart"></i></button>
+             <button onclick="toggleFavorite('YorkshireTerrier', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+    <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
+</button>
             </div>
 
             <div class="group relative bg-white/60 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-200 dark:border-gray-700 active:scale-95">
-                <a href="breed-page.html" class="block">
+                <a href="BorderCollie.html" class="block">
                     <div class="relative h-64 overflow-hidden"><img src="Card4.webp" alt="Бордер-колі" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 font-display">Бордер-колі</div>
+                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Бордер-колі</div>
                 </a>
-                <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 z-10"><i class="fa-solid fa-heart"></i></button>
+               <button onclick="toggleFavorite('BorderCollie', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+    <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
+</button>
             </div>
 
             <div class="group relative bg-white/60 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-200 dark:border-gray-700 active:scale-95">
-                <a href="breed-page.html" class="block">
+                <a href="Doberman.html" class="block">
                     <div class="relative h-64 overflow-hidden"><img src="Card5.webp" alt="Доберман" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 font-display">Доберман</div>
+                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Доберман</div>
                 </a>
-                <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 z-10"><i class="fa-solid fa-heart"></i></button>
+               <button onclick="toggleFavorite('Doberman', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+    <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
+</button>
             </div>
 
             <div class="group relative bg-white/60 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-200 dark:border-gray-700 active:scale-95">
-                <a href="breed-page.html" class="block">
-                    <div class="relative h-64 overflow-hidden"><img src="Card6.webp" alt="Мальтійська болонка" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 font-display">Мальтійська болонка</div>
+                <a href="Bolognese.html" class="block">
+                    <div class="relative h-64 overflow-hidden"><img src="Card6.webp" alt="Болоньєз" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Болоньєз</div>
                 </a>
-                <button class="absolute top-3 right-3 w-10 h-10 bg-white/70 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 z-10"><i class="fa-solid fa-heart"></i></button>
+               <button onclick="toggleFavorite('Bolognese', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+    <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
+</button>
             </div>
 
         </div>
@@ -171,6 +186,41 @@
                 localStorage.setItem('color-theme', 'dark');
             }
         });
+    function toggleFavorite(breedId, btnElement) {
+    let favorites = JSON.parse(localStorage.getItem('myFavorites')) || [];
+    const icon = btnElement.querySelector('i');
+    
+    if (favorites.includes(breedId)) {
+        favorites = favorites.filter(id => id !== breedId);
+        icon.classList.remove('text-red-500');
+        icon.classList.add('text-gray-400');
+    } else {
+        favorites.push(breedId);
+        icon.classList.remove('text-gray-400');
+        icon.classList.add('text-red-500');
+    }
+    localStorage.setItem('myFavorites', JSON.stringify(favorites));
+}
+
+// При завантаженні перевіряємо всі картки на головній
+window.addEventListener('DOMContentLoaded', () => {
+    const favorites = JSON.parse(localStorage.getItem('myFavorites')) || [];
+    const buttons = document.querySelectorAll('button[onclick^="toggleFavorite"]');
+    
+    buttons.forEach(btn => {
+        // Отримуємо ID породи з атрибута onclick
+        const match = btn.getAttribute('onclick').match(/'([^']+)'/);
+        if (match) {
+            const breedId = match[1];
+            if (favorites.includes(breedId)) {
+                const icon = btn.querySelector('i');
+                icon.classList.add('text-red-500');
+                icon.classList.remove('text-gray-400');
+            }
+        }
+    });
+});
+
     </script>
 </body>
 </html>
