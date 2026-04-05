@@ -44,15 +44,15 @@
             </div>
 
             <div class="flex items-center gap-3 md:gap-5">
-                <a href="favorite.html" class="text-brand-dark dark:text-violet-400 hover:scale-110 transition text-xl">
+                <a href="favorite.html" aria-label="Перейти до списку вподобаних порід" class="text-brand-dark dark:text-violet-400 hover:scale-110 transition text-xl">
                     <i class="fa-solid fa-heart"></i>
                 </a>
 
-                <button class="text-gray-700 dark:text-gray-300 hover:text-brand-dark dark:hover:text-white transition text-xl">
+                <button aria-label="Відкрити пошук" class="text-gray-700 dark:text-gray-300 hover:text-brand-dark dark:hover:text-white transition text-xl">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
 
-                <button id="theme-toggle" class="p-2 rounded-full bg-white/50 dark:bg-gray-700 text-gray-700 dark:text-yellow-400 hover:bg-white transition shadow-sm">
+                <button id="theme-toggle" aria-label="Переключити тему (світла/темна)" class="p-2 rounded-full bg-white/50 dark:bg-gray-700 text-gray-700 dark:text-yellow-400 hover:bg-white transition shadow-sm">
                     <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden"></i>
                     <i id="theme-toggle-dark-icon" class="fa-solid fa-moon"></i>
                 </button>
@@ -93,7 +93,7 @@
                         <h3 class="text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Німецька вівчарка</h3>
                     </div>
                 </a>
-              <button onclick="toggleFavorite('GermanShepherd', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+              <button onclick="toggleFavorite('GermanShepherd', this)" aria-label="Додати до обраного" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
     <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
 </button>
             </div>
@@ -103,7 +103,7 @@
                     <div class="relative h-64 overflow-hidden"><img src="Card2.webp" alt="Ірландський вовкодав" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                     <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Ірландський вовкодав</div>
                 </a>
-                <button onclick="toggleFavorite('IrishWolfhound', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+                <button onclick="toggleFavorite('IrishWolfhound', this)" aria-label="Додати до обраного"  class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
     <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
 </button>
             </div>
@@ -113,7 +113,7 @@
                     <div class="relative h-64 overflow-hidden"><img src="Card3.webp" alt="Йоркширський тер'єр" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                     <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Йоркширський тер'єр</div>
                 </a>
-             <button onclick="toggleFavorite('YorkshireTerrier', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+             <button onclick="toggleFavorite('YorkshireTerrier', this)" aria-label="Додати до обраного"  class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
     <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
 </button>
             </div>
@@ -123,7 +123,7 @@
                     <div class="relative h-64 overflow-hidden"><img src="Card4.webp" alt="Бордер-колі" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                     <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Бордер-колі</div>
                 </a>
-               <button onclick="toggleFavorite('BorderCollie', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+               <button onclick="toggleFavorite('BorderCollie', this)" aria-label="Додати до обраного"  class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
     <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
 </button>
             </div>
@@ -133,7 +133,7 @@
                     <div class="relative h-64 overflow-hidden"><img src="Card5.webp" alt="Доберман" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                     <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Доберман</div>
                 </a>
-               <button onclick="toggleFavorite('Doberman', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+               <button onclick="toggleFavorite('Doberman', this)" aria-label="Додати до обраного" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
     <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
 </button>
             </div>
@@ -143,7 +143,7 @@
                     <div class="relative h-64 overflow-hidden"><img src="Card6.webp" alt="Болоньєз" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                     <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Болоньєз</div>
                 </a>
-               <button onclick="toggleFavorite('Bolognese', this)" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
+               <button onclick="toggleFavorite('Bolognese', this)" aria-label="Додати до обраного"  class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
     <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
 </button>
             </div>
