@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Болоньєз (Італійська болонка): пухнастий аристократ — HappyTails</title>
+<meta name="description" content="Дізнайтеся все про породу Болоньєз: від аристократичного походження в Італії до особливостей догляду за хмаринкою білої шерсті. Ідеальний собака-компаньйон.">
+<meta name="keywords" content="болоньєз, італійська болонка, білий пухнастий собака, маленькі породи, породи для квартири, догляд за болоньєзом"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#ddd6fe',
+                            dark: '#6d28d9',
+                            bg: '#f0f9ff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        display: ['Raleway', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-bg dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300 font-sans">
+
+    <nav class="bg-brand-light dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-xl md:text-2xl font-black text-brand-dark dark:text-violet-400 flex items-center gap-2 shrink-0 font-display">
+                <i class="fa-solid fa-paw"></i>
+                <span>HappyTails</span>
+            </a>
+            <div class="flex items-center gap-5">
+                <a href="index.html" class="text-brand-dark dark:text-violet-400 font-bold hover:underline font-display">Головна</a>
+                <button id="theme-toggle" class="p-2 rounded-full bg-white/50 dark:bg-gray-700 text-gray-700 dark:text-yellow-400 shadow-sm transition-all">
+                    <i id="theme-toggle-dark-icon" class="fa-solid fa-moon"></i>
+                    <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto py-10 px-4 max-w-4xl">
+        <a href="index.html" class="inline-flex items-center gap-2 text-violet-700 dark:text-violet-400 font-bold mb-6 hover:gap-4 transition-all font-display">
+            <i class="fa-solid fa-arrow-left"></i> Назад до списку
+        </a>
+
+        <h1 class="text-4xl md:text-6xl font-black text-brand-dark dark:text-violet-400 mb-8 uppercase tracking-tighter font-display">
+            Болоньєз 
+        </h1>
+
+        <div class="flex flex-col items-center mb-12">
+            <div class="w-full max-w-xl aspect-square overflow-hidden relative rounded-3xl shadow-2xl border-4 border-white dark:border-gray-800">
+                <div class="flex h-full transition-transform duration-700 ease-in-out" id="slider">
+                    <img src="B1.webp" class="w-full h-full object-cover flex-shrink-0" alt="Болоньєз 1">
+                    <img src="B2.webp" class="w-full h-full object-cover flex-shrink-0" alt="Болоньєз 2">
+                    <img src="B3.webp" class="w-full h-full object-cover flex-shrink-0" alt="Болоньєз 3">
+                    <img src="B4.webp" class="w-full h-full object-cover flex-shrink-0" alt="Болоньєз 4">
+                    <img src="B5.webp" class="w-full h-full object-cover flex-shrink-0" alt="Болоньєз 5">
+                </div>
+                
+                <button onclick="toggleFavorite('Bolognese')" id="fav-btn" class="absolute top-4 right-4 w-12 h-12 bg-white/80 dark:bg-gray-900/60 backdrop-blur-md rounded-full text-gray-400 hover:text-red-500 transition-all text-xl shadow-md z-10 flex items-center justify-center">
+    <i id="heart-icon" class="fa-solid fa-heart transition-colors duration-300"></i>
+</button>
+
+            </div>
+
+            <div class="flex items-center mt-6 space-x-3" id="dot-indicators">
+                <span class="w-3 h-3 bg-violet-300 dark:bg-gray-600 rounded-full cursor-pointer transition-all"></span>
+                <span class="w-3 h-3 bg-violet-300 dark:bg-gray-600 rounded-full cursor-pointer transition-all"></span>
+                <span class="w-3 h-3 bg-violet-300 dark:bg-gray-600 rounded-full cursor-pointer transition-all"></span>
+                <span class="w-3 h-3 bg-violet-300 dark:bg-gray-600 rounded-full cursor-pointer transition-all"></span>
+                <span class="w-3 h-3 bg-violet-300 dark:bg-gray-600 rounded-full cursor-pointer transition-all"></span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="md:col-span-2 space-y-8">
+                <section>
+                    <h2 class="text-2xl font-bold border-b-2 border-violet-200 pb-2 mb-4 text-brand-dark dark:text-violet-400 font-display">Опис</h2>
+                    <p class="text-lg leading-relaxed opacity-90">
+ Від зовнішнього вигляду болоньєзе можна отримати колосальне естетичне задоволення. Собаки болоньєз мають густу красиву шовковисту шерсть білого кольору, переважно без плям і відтінків. На тлі білої шерсті виблискують темні очі та чорна мочка носа, які надають болонським бішонам ефектний вигляд. Болонський бішон – це кремезна порода компактних розмірів. Корпус болоньєзе має квадратні обриси. Голова вихованця кругла, морда злегка плеската, вуха високо посаджені, висячі. Лапи собаки середньої довжини та пропорційні розміру корпусу. Хвіст вихованця короткий і трохи зігнутий. Попри мініатюрну статуру, болоньєз має сильні щелепи. Його очі великі та круглі, та практично завжди виблискують цікавістю
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold border-b-2 border-violet-200 pb-2 mb-4 text-brand-dark dark:text-violet-400 font-display">Характер</h2>
+                    <p class="text-lg leading-relaxed opacity-90">
+Якщо можна уявити собі ідеальний характер для кімнатного собаки, то це буде характер болоньеза. Дуже добрі, розумні, веселі, але при цьому ненав'язливі, вони готові супроводжувати свого господаря скрізь: чи то похід до магазину, чи поїздка за місто, чи вечір перед телевізором. Болоньєзи щасливі від спілкування з людьми, але це не означає, що вони наполегливо вимагатимуть, щоб їм приділяли увагу. Собачки чудово уживаються з іншими домашніми тваринами, головне, стежити, щоб кіт, який часто перевершує розмірами собачку, не образив болоньеза. Завдяки тому, що ці болоночки не такі активні, як, наприклад, пуделі або джек-рассел-тер'єри, вони стали ідеальними собачками для людей похилого віку, які не мають сил на довгі рухливі ігри зі своїми вихованцями, зате люблять вести з ними розмови та бути поряд, а собачкам тільки того й треба.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold border-b-2 border-violet-200 pb-2 mb-4 text-brand-dark dark:text-violet-400 font-display">Походження</h2>
+                    <p class="font-bold mb-2">Країна походження: Італія</p>
+                    <p class="text-lg leading-relaxed opacity-90">
+Історія породи болоньєз налічує багато століть, а її походження покрито таємницею. Батьківщиною болоньєзе, вони ж болонські бішони, називають місто на півночі Італії – Болонью. Саме звідси вихованець отримав свою назву. Заведено вважати, що собаки болоньєз є нащадками мальтійської болонки. Перші згадки про собак, які за описом схожі на болонського бішона, датуються V ст. до н.е. В епоху Відродження болонські бішони були фаворитами італійських аристократів. Існує легенда, що останній король Італії Умберто подарував вихованця цієї породи принцесі Бельгії – Хосе, на її день народження. А флорентійський банкір Козімо Медічі відправив болонських бішонів кільком багатим і впливовим сім'ям Брюсселя. До початку XIX століття популярність болонських бішонів впала, вони почали зникати. Щоб виправити ситуацію, кілька заводчиків, зокрема, великий шанувальник цієї породи Джан Франко Джаннеллі повернув популярність болоньєзе. З тих часів, болонським бішонам вдалося підкорити та завоювати любов європейців.
+                    </p>
+                </section>
+            </div>
+
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold border-b-2 border-violet-200 pb-2 text-brand-dark dark:text-violet-400 flex items-center gap-2 font-display">
+                    <i class="fa-solid fa-list-check text-sm opacity-60"></i> Характеристика
+                </h2>
+                
+                <div class="space-y-4">
+                    <div class="group p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-800 rounded-2xl shadow-sm border border-violet-100 dark:border-gray-700 hover:border-violet-400 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <i class="fa-solid fa-expand text-violet-600 dark:text-violet-400"></i>
+                            <span class="text-xs uppercase font-black text-gray-500 dark:text-gray-400 tracking-wider font-display">Розмір</span>
+                        </div>
+                        <span class="font-bold text-gray-800 dark:text-gray-100">Мініатюрні</span>
+                    </div>
+
+                    <div class="group p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-800 rounded-2xl shadow-sm border border-violet-100 dark:border-gray-700 hover:border-violet-400 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <i class="fa-solid fa-arrows-up-down text-violet-600 dark:text-violet-400"></i>
+                            <span class="text-xs uppercase font-black text-gray-500 dark:text-gray-400 tracking-wider font-display">Зріст</span>
+                        </div>
+                        <span class="font-bold text-gray-800 dark:text-gray-100 text-sm">самці 27-30 см, самки 25-28 см</span>
+                    </div>
+
+                    <div class="group p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-800 rounded-2xl shadow-sm border border-violet-100 dark:border-gray-700 hover:border-violet-400 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <i class="fa-solid fa-scale-balanced text-violet-600 dark:text-violet-400"></i>
+                            <span class="text-xs uppercase font-black text-gray-500 dark:text-gray-400 tracking-wider font-display">Вага породи</span>
+                        </div>
+                        <span class="font-bold text-gray-800 dark:text-gray-100 text-sm">самці 2,5-4 кг, самки 2,5-4 кг</span>
+                    </div>
+
+                    <div class="group p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-800 rounded-2xl shadow-sm border border-violet-100 dark:border-gray-700 hover:border-violet-400 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <i class="fa-solid fa-hourglass-half text-violet-600 dark:text-violet-400"></i>
+                            <span class="text-xs uppercase font-black text-gray-500 dark:text-gray-400 tracking-wider font-display">Тривалість життя</span>
+                        </div>
+                        <span class="font-bold text-gray-800 dark:text-gray-100">12-15 років</span>
+                    </div>
+
+                    <div class="group p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-800 rounded-2xl shadow-sm border border-violet-100 dark:border-gray-700 hover:border-violet-400 dark:hover:border-violet-500 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center gap-3 mb-1">
+                            <i class="fa-solid fa-location-dot text-violet-600 dark:text-violet-400"></i>
+                            <span class="text-xs uppercase font-black text-gray-500 dark:text-gray-400 tracking-wider font-display">Країна походження</span>
+                        </div>
+                        <span class="font-bold text-gray-800 dark:text-gray-100">Італія</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+ <footer class="bg-brand-light dark:bg-gray-800 py-8 mt-10 transition-colors duration-300 border-t border-brand-dark/10">
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-xl font-black text-brand-dark dark:text-violet-400 mb-2 font-display">
+                <i class="fa-solid fa-paw"></i> HappyTails
+            </div>
+            <p class="text-brand-dark/70 dark:text-gray-400 text-sm italic">Зроблено з любов'ю до пухнастиків</p>
+            <div class="mt-4 text-xs text-brand-dark/50 dark:text-gray-500 font-medium">
+                © 2026
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const slider = document.getElementById('slider');
+        const dots = document.querySelectorAll('#dot-indicators span');
+        let currentSlide = 0;
+        const totalSlides = dots.length;
+
+        function goToSlide(index) {
+            slider.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach(dot => {
+                dot.classList.remove('bg-violet-700', 'w-6');
+                dot.classList.add('bg-violet-300', 'w-3');
+            });
+            dots[index].classList.remove('bg-violet-300', 'w-3');
+            dots[index].classList.add('bg-violet-700', 'w-6');
+            currentSlide = index;
+        }
+
+        function autoSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }
+        setInterval(autoSlide, 6000); 
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => goToSlide(idx));
+        });
+
+        goToSlide(0);
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            lightIcon.classList.remove('hidden');
+            darkIcon.classList.add('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            lightIcon.classList.toggle('hidden');
+            darkIcon.classList.toggle('hidden');
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+function toggleFavorite(breedId) {
+    let favorites = JSON.parse(localStorage.getItem('myFavorites')) || [];
+    const icon = document.getElementById('heart-icon');
+    
+    if (favorites.includes(breedId)) {
+        // Якщо вже є — видаляємо
+        favorites = favorites.filter(id => id !== breedId);
+        icon.classList.replace('text-red-500', 'text-gray-400');
+    } else {
+        // Якщо немає — додаємо
+        favorites.push(breedId);
+        icon.classList.replace('text-gray-400', 'text-red-500');
+    }
+    
+    // Зберігаємо оновлений список у пам'ять браузера
+    localStorage.setItem('myFavorites', JSON.stringify(favorites));
+}
+
+// Перевірка при завантаженні сторінки саме для Болоньєза
+window.addEventListener('DOMContentLoaded', function() {
+    const favorites = JSON.parse(localStorage.getItem('myFavorites')) || [];
+    const breedId = 'Bolognese'; // Назва породи для цієї сторінки
+    const icon = document.getElementById('heart-icon');
+    
+    if (favorites.includes(breedId)) {
+        // Якщо порода в списку вподобаних — робимо серце червоним
+        icon.classList.add('text-red-500');
+        icon.classList.remove('text-gray-400');
+    } else {
+        // Якщо ні — залишаємо сірим
+        icon.classList.add('text-gray-400');
+        icon.classList.remove('text-red-500');
+    }
+});
+    </script>
+</body>
+</html>
