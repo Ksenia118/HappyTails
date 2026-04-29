@@ -48,9 +48,9 @@
                     <i class="fa-solid fa-heart"></i>
                 </a>
 
-                <button aria-label="Відкрити пошук" class="text-gray-700 dark:text-gray-300 hover:text-brand-dark dark:hover:text-white transition text-xl">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+                <button id="search-btn" aria-label="Відкрити пошук" class="text-gray-700 dark:text-gray-300 hover:text-brand-dark dark:hover:text-white transition text-xl">
+    <i class="fa-solid fa-magnifying-glass"></i>
+</button>
 
                 <button id="theme-toggle" aria-label="Переключити тему (світла/темна)" class="p-2 rounded-full bg-white/50 dark:bg-gray-700 text-gray-700 dark:text-yellow-400 hover:bg-white transition shadow-sm">
                     <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden"></i>
@@ -59,6 +59,17 @@
             </div>
         </div>
     </nav>
+<div id="search-bar" class="hidden bg-white dark:bg-gray-800 border-b border-brand-dark/10 shadow-inner transition-all duration-300">
+    <div class="container mx-auto px-4 py-4">
+        <div class="relative max-w-2xl mx-auto">
+            <input type="text" id="breed-search" placeholder="Введіть назву породи" 
+                   class="w-full bg-gray-100 dark:bg-gray-900 border-2 border-brand-light focus:border-brand-dark dark:border-gray-700 rounded-xl px-4 py-3 outline-none transition-colors">
+            <button id="close-search" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-brand-dark">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+    </div>
+</div>
 
     <header class="relative w-full h-[70vh] md:h-[500px] bg-cyan-100 dark:bg-gray-900 overflow-hidden border-b border-cyan-200 dark:border-gray-800 transition-colors duration-300">
         <img src="Photo.webp" 
@@ -82,6 +93,13 @@
     </header>
 
     <main class="container mx-auto py-10 px-4">
+        <div id="not-found-message" class="hidden text-center py-20 animate-bounce">
+    <i class="fa-solid fa-dog text-6xl text-gray-300 mb-4 block"></i>
+    <p class="text-xl font-display font-bold text-brand-dark dark:text-violet-400">
+        Гав! Такого хвостика ми не знайшли...
+    </p>
+</div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
             <div class="group relative bg-white/60 dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-violet-200 dark:border-gray-700 active:scale-95">
@@ -89,9 +107,7 @@
                     <div class="relative h-64 overflow-hidden">
                         <img src="Card1.webp" alt="Німецька вівчарка" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
-                    <div class="p-4 text-center font-display">
-                        <h3 class="text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Німецька вівчарка</h3>
-                    </div>
+                    <div class="p-4 text-center text-lg font-bold text-violet-700 dark:text-violet-400 group-active:text-cyan-500 transition-colors duration-150">Німецька вівчарка</div>
                 </a>
               <button onclick="toggleFavorite('GermanShepherd', this)" aria-label="Додати до обраного" class="absolute top-4 right-4 w-10 h-10 bg-white/90 dark:bg-gray-800/80 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-all z-10">
     <i class="fa-solid fa-heart text-gray-400 transition-colors"></i>
@@ -217,6 +233,53 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+const searchBtn = document.getElementById('search-btn');
+const searchBar = document.getElementById('search-bar');
+const closeSearch = document.getElementById('close-search');
+const searchInput = document.getElementById('breed-search');
+const cards = document.querySelectorAll('main .group.relative');
+const notFoundMessage = document.getElementById('not-found-message');
+
+// Відкрити/Закрити панель пошуку
+searchBtn.addEventListener('click', () => {
+    searchBar.classList.toggle('hidden');
+    if (!searchBar.classList.contains('hidden')) {
+        searchInput.focus(); // Автоматично ставимо курсор у поле
+    }
+});
+
+closeSearch.addEventListener('click', () => {
+    searchBar.classList.add('hidden');
+    searchInput.value = ''; // Очищуємо пошук при закритті
+    filterBreeds(''); // Показуємо всі картки знову
+});
+
+// Функція фільтрації (враховує назви в div)
+function filterBreeds(query) {
+    let hasResults = false;
+    const cleanQuery = query.toLowerCase().trim();
+
+    cards.forEach(card => {
+        // Оскільки ми вирішили використовувати div, шукаємо текст у блоці з класом p-4
+        const breedName = card.querySelector('.p-4').textContent.toLowerCase();
+        
+        if (breedName.includes(cleanQuery)) {
+            card.style.display = 'block';
+            hasResults = true;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    if (hasResults || cleanQuery === '') {
+        notFoundMessage.classList.add('hidden');
+    } else {
+        notFoundMessage.classList.remove('hidden');
+    }
+}
+
+// Слухач введення тексту
+searchInput.addEventListener('input', (e) => filterBreeds(e.target.value));
 
     </script>
 </body>
