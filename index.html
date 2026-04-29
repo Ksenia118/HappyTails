@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
@@ -59,18 +59,6 @@
             </div>
         </div>
     </nav>
-<div id="search-bar" class="hidden bg-white dark:bg-gray-800 border-b border-brand-dark/10 shadow-inner transition-all duration-300">
-    <div class="container mx-auto px-4 py-4">
-        <div class="relative max-w-2xl mx-auto">
-            <input type="text" id="breed-search" placeholder="Введіть назву породи" 
-                   class="w-full bg-gray-100 dark:bg-gray-900 border-2 border-brand-light focus:border-brand-dark dark:border-gray-700 rounded-xl px-4 py-3 outline-none transition-colors">
-            <button id="close-search" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-brand-dark">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-        </div>
-    </div>
-</div>
-
     <header class="relative w-full h-[70vh] md:h-[500px] bg-cyan-100 dark:bg-gray-900 overflow-hidden border-b border-cyan-200 dark:border-gray-800 transition-colors duration-300">
         <img src="Photo.webp" 
              class="absolute inset-0 w-full h-full object-cover object-top md:object-[75%_50%]" 
@@ -91,6 +79,18 @@
         </div>
         <div class="absolute inset-0 bg-black/15 pointer-events-none"></div>
     </header>
+   <div id="search-bar" class="hidden bg-brand-bg dark:bg-gray-900 border-b border-brand-dark/10 transition-all duration-300">
+    <div class="container mx-auto px-4 py-4">
+        <div class="relative max-w-2xl mx-auto">
+            <input type="text" id="breed-search" placeholder="Введіть назву породи..." 
+                   class="w-full bg-white/60 dark:bg-gray-800/60 border-2 border-brand-light dark:border-gray-700 focus:border-brand-dark rounded-xl px-4 py-3 outline-none transition-colors backdrop-blur-sm">
+            
+            <button id="close-search" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-brand-dark transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+    </div>
+</div>
 
     <main class="container mx-auto py-10 px-4">
         <div id="not-found-message" class="hidden text-center py-20 animate-bounce">
@@ -233,37 +233,35 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+    // Знаходимо елементи
 const searchBtn = document.getElementById('search-btn');
 const searchBar = document.getElementById('search-bar');
 const closeSearch = document.getElementById('close-search');
 const searchInput = document.getElementById('breed-search');
 const cards = document.querySelectorAll('main .group.relative');
 const notFoundMessage = document.getElementById('not-found-message');
+const mainHeader = document.querySelector('header');
 
-// Відкрити/Закрити панель пошуку
-searchBtn.addEventListener('click', () => {
-    searchBar.classList.toggle('hidden');
-    if (!searchBar.classList.contains('hidden')) {
-        searchInput.focus(); // Автоматично ставимо курсор у поле
-    }
-});
-
-closeSearch.addEventListener('click', () => {
-    searchBar.classList.add('hidden');
-    searchInput.value = ''; // Очищуємо пошук при закритті
-    filterBreeds(''); // Показуємо всі картки знову
-});
-
-// Функція фільтрації (враховує назви в div)
+// Функція фільтрації
 function filterBreeds(query) {
-    let hasResults = false;
     const cleanQuery = query.toLowerCase().trim();
+    let hasResults = false;
 
+    // 1. Керування видимістю фото (Header)
+    if (mainHeader) {
+        mainHeader.style.display = (cleanQuery.length > 0) ? 'none' : 'block';
+    }
+
+    // 2. Фільтрація карток
     cards.forEach(card => {
-        // Оскільки ми вирішили використовувати div, шукаємо текст у блоці з класом p-4
-        const breedName = card.querySelector('.p-4').textContent.toLowerCase();
+        // Беремо весь текст з картки, щоб точно нічого не пропустити
+        const breedName = card.innerText.toLowerCase();
+        const words = breedName.split(/\s+/);
         
-        if (breedName.includes(cleanQuery)) {
+        // Перевіряємо чи починається хоча б одне слово з запиту
+        const isMatch = words.some(word => word.startsWith(cleanQuery));
+
+        if (isMatch) {
             card.style.display = 'block';
             hasResults = true;
         } else {
@@ -271,16 +269,36 @@ function filterBreeds(query) {
         }
     });
 
-    if (hasResults || cleanQuery === '') {
-        notFoundMessage.classList.add('hidden');
-    } else {
-        notFoundMessage.classList.remove('hidden');
+    // 3. Повідомлення про помилку
+    if (notFoundMessage) {
+        if (cleanQuery.length > 0 && !hasResults) {
+            notFoundMessage.classList.remove('hidden');
+        } else {
+            notFoundMessage.classList.add('hidden');
+        }
     }
 }
 
-// Слухач введення тексту
-searchInput.addEventListener('input', (e) => filterBreeds(e.target.value));
+// Події
+if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+        searchBar.classList.toggle('hidden');
+        if (!searchBar.classList.contains('hidden')) searchInput.focus();
+    });
+}
+
+if (closeSearch) {
+    closeSearch.addEventListener('click', () => {
+        searchBar.classList.add('hidden');
+        searchInput.value = '';
+        filterBreeds('');
+    });
+}
+
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => filterBreeds(e.target.value));
+}
 
     </script>
 </body>
-</html>
+</html>   
